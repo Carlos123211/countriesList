@@ -42,7 +42,7 @@ const randomTop = (arr, n) => {
 
 const loadCountries = () => {
     Countries = []
-    fetch('https://restcountries.eu/rest/v2/all')
+    fetch('https://restcountries.eu/rest/v2/lang/es')
         .then(response => response.json())
         .then(data => {
             const countries = data
