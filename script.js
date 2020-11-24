@@ -60,20 +60,23 @@ const loadDataCountry = (country) => {
     const img = document.createElement('img')
     img.src = country.flag
     img.width = 200;
-    img.height = 200;
     const div2 = document.createElement('div')
-
+    div2.style.display = 'inline-flex'
+    div2.style.marginBottom = '0.4em'
     const p = document.createElement('p')
     p.textContent = country.region
-    p.classList.add('small-margin')
+    p.classList.add('no-margin')
     const p2 = document.createElement('p')
-    p2.textContent = 'Continente'
-    p.classList.add('small-margin')
+    p2.textContent = 'Continente: '
+    p2.classList.add('no-margin')
+    p2.style.fontWeight = 'bold'
+    div2.appendChild(p2)
+    div2.appendChild(p)
     const h2 = document.createElement('h2')
     h2.textContent = country.translations.es
     h2.classList.add('small-margin')
     div.appendChild(h2)
-    div.appendChild(p)
+    div.appendChild(div2)
     div.appendChild(img)
     content_modal.appendChild(div)
     console.log(country)
