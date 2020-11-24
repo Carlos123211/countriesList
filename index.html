@@ -13,23 +13,35 @@
 <body>
 
     <header>
-
+        <div class="text-center">
+            <h1>Bienvenidos a Países Random</h1>
+        </div>
+        <div class="text-justify">
+            <p>Conforme vayas usando el botón de generar, podrás generar una nueva lista de países y así ir conociendolos</p>
+            <p>Si le das click sobre el país se te abrirá un pop-up con más información</p>
+        </div>
     </header>
     <div class="content">
         <div class="mainContent">
             <table id="country_list">
                 <thead>
                     <tr>
-                        <td>Pais</td>
+                        <td>País</td>
                         <td>Capital</td>
                         <td>Población</td>
                     </tr>
                 </thead>
             </table>
+            <div class="buttonC">
+                <button onclick="loadCountries()" class="buttonG">Generar</button>
+            </div>
         </div>
     </div>
     <footer>
-
+        <div class="text-center">
+            <p>&copy; 2020 Carlos Gamarra
+                <p></p>
+        </div>
     </footer>
 
     <div id="modal_caracteristicas" class="modal">

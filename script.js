@@ -41,6 +41,7 @@ const randomTop = (arr, n) => {
 }
 
 const loadCountries = () => {
+    Countries = []
     fetch('https://restcountries.eu/rest/v2/all')
         .then(response => response.json())
         .then(data => {
@@ -79,14 +80,19 @@ const loadDataCountry = (country) => {
     div.appendChild(div2)
     div.appendChild(img)
     content_modal.appendChild(div)
-    console.log(country)
 }
 
 const generateTable = () => {
+
+
     let table = document.getElementById('country_list');
+    const getTable = document.getElementById('new_tbody')
+    if (getTable) {
+        table.removeChild(getTable)
+    }
     let tbody = document.createElement('tbody');
+    tbody.id = 'new_tbody'
     const list = Countries
-    console.log(list)
     for (let i = 0; i < list.length; i++) {
         tr = tbody.insertRow()
         for (let j = 0; j < 3; j++) {
