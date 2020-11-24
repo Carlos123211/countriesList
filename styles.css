@@ -1,3 +1,16 @@
+@charset "utf - 8";
+
+/* Fonts */
+
+@font-face {
+    src: url("./fonts/Montserrat/Montserrat-Regular.ttf");
+    font-family: "Mont";
+}
+
+body {
+    font-family: "Mont";
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -13,10 +26,11 @@
 
 .modal-window {
     position: relative;
-    background-color: #FFFFFF;
+    background-color: #efe5c8;
     width: 50%;
     margin: 10% auto;
     padding: 20px;
+    border-radius: 1em;
 }
 
 .modal-window.small {
@@ -47,4 +61,45 @@
 
 .open {
     display: block;
+}
+
+#country_list {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#country_list tr td {
+    border: 1px solid black;
+}
+
+#country_list td {
+    padding: 8px;
+}
+
+#country_list thead td {
+    font-weight: bold;
+    color: rgb(211, 119, 119);
+    font-size: larger;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center;
+}
+
+.country_title:hover {
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+
+.contentM {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-margin {
+    margin: 5px
 }
