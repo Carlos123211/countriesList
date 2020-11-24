@@ -67,7 +67,7 @@ const loadDataCountry = (country) => {
     p.textContent = country.region
     p.classList.add('small-margin')
     const p2 = document.createElement('p')
-    p2.textContent = Continente
+    p2.textContent = 'Continente'
     p.classList.add('small-margin')
     const h2 = document.createElement('h2')
     h2.textContent = country.translations.es
